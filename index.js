@@ -7,8 +7,8 @@ app.get('/', function(request, response) {
   response.send('Hello there!');
 });
 
-app.get('/domain/:d', function (req, res) {
-	var domain = req.params.d;
+app.get('/domain/:text', function (req, res) {
+	var domain = req.params.text;
 	dns.resolve4(domain, function (err, addresses) {
 		if (err){
 			res.send('This domain is availabel!');
