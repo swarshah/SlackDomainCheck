@@ -9,6 +9,7 @@ app.get('/', function(request, response) {
 });
 
 app.post('/', function(req, res) {
+	console.log(req.body);
 	var domain = req.body.text;
 	dns.resolve4(domain, function (err, addresses) {
 		if (err){
