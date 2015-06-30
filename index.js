@@ -1,7 +1,7 @@
 var express = require('express');
+var dns = require('dns');
 var app = express();
 app.use(express.bodyParser());
-var dns = require('dns');
 
 app.get('/', function(request, response) {
   response.send('Hello there!');
