@@ -2,6 +2,10 @@ var express = require('express');
 var dns = require('dns');
 var app = express();
 
+var bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
 app.get('/', function(request, response) {
   response.send('Hello there!');
 });
