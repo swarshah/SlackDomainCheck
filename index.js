@@ -16,10 +16,10 @@ app.post('/', function(req, res) {
 	var domain = req.body.text;
 	dns.resolve4(domain, function (err, addresses) {
 		if (err){
-			res.send('This domain is availabel!');
+			res.send('Looks like *'+domain+'* is availabel!');
 		}
 		else{
-			res.send('This domain is not available!');
+			res.send('Looks like *'+domain+'* is *not* availabel!');
 		}
 	});
 });
