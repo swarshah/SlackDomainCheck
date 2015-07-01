@@ -11,17 +11,17 @@ app.get('/', function(request, response) {
 });
 
 app.post('/', function(req, res) {
-	console.log(req.body);
+	//console.log(req.body);
 	console.log(req.body.text);
 	var domain = req.body.text;
-	/*dns.resolve4(domain, function (err, addresses) {
+	dns.resolve4(domain, function (err, addresses) {
 		if (err){
 			res.send('This domain is availabel!');
 		}
 		else{
 			res.send('This domain is not available!');
 		}
-	});*/
+	});
 });
 
 app.set('port', (process.env.PORT || 5000));
