@@ -7,7 +7,6 @@
     "start": "node index.js"
   },
     "dependencies": {
-    "ejs": "^2.3.1",
     "express": "~4.9.x",
 	"dns": "0.2.2",
 	"body-parser": "1.13.1"
