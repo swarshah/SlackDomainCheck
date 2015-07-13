@@ -13,7 +13,6 @@ app.get('/', function(request, response) {
 });
 
 app.post('/', function(req, res) {
-	console.log(req.body.text);
 	var domain = req.body.text;
 	//DNS resolve to check if domain is available or not
 	dns.resolve4(domain, function (err, addresses) {
@@ -26,6 +25,7 @@ app.post('/', function(req, res) {
 	});
 });
 
+//Port to listen
 app.set('port', (process.env.PORT || 5000));
 
 app.listen(app.get('port'), function() {
